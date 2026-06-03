@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+    margin-bottom:10px;
+}
+
+h1{
+    color:aliceblue;
+    background-color: black;
+    text-align: center;
+    border:2px solid brown;
+}
+nav{
+    color: aliceblue;
+    background-color: aqua;
+    border: 2px solid black;
+    text-align: center;
+}
+a{
+    margin-right: 100px;
+}
+h2{
+    color: aliceblue;
+    border: 2px solid brown;
+    text-align: center;
+}
+h3{
+    color:aliceblue;
+    background-color: black;
+    border: 2px solid brown;
+    text-align: center;
+}
+.highlight{
+    color: black;
+    background-color: aliceblue;
+    margin-left: 20px;
+    margin-right:20px;
+    padding: 30px 30px;
+    text-align: center;
+}
+li{
+    list-style-type: none;
+    text-align: center;
+    
+}
+table{
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+form{
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color: aqua;
+}
+body{
+    background-image:url(sky-blue-gradient-background-soft-plain-light-blue-and-white-radial-smooth-wallpaper-illustration-design-eps-10-vector.jpg)
+}
+#videoMessage{
+    color: aliceblue;
+    background-color: black;
+    border: 2px solid brown;
+    display: flex;
+    justify-content: center;
+}
+h5{
+    text-align: center;
+    color:chocolate;
+}
+footer{
+    margin-bottom: 0;
+}
+

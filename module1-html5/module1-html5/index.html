@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task9html</title>
+        <link rel="stylesheet" href="style.css">
+        <!--Task3-->
+        <style>
+            h2{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Task1-->
+        <!--This is header part-->
+        <header>
+            <h1>
+                Local Community Event Portal 
+            </h1>
+        </header>
+        <h5>This is Task1</h5>
+        <!--This is main part-->
+        <main>
+            <!--This is navigation part-->
+            <!--Task2-->
+            
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#events">Events</a>
+                <a href="#contact">Contact</a>
+                <a href="help.html" target="_blank">Help</a>
+
+            </nav>
+            <h5>This is Task2</h5>
+            
+            <div id="welcomeBanner">
+                <h2>Welcome to Local Community Event Portal</h2>
+            </div>
+            <h5>This is Task3</h5>
+            <!--This is home section-->
+            <section id="home">
+                <p class="highlight">Discover and participate in local events happening in your community. Stay connected and engaged with your neighbors!
+                A local event community portal is an online platform designed to connect people within a specific community by providing information about local events, activities, and announcements. It allows event organizers, businesses, and community members to create, share, and manage events such as cultural programs, workshops, sports activities, festivals, and social gatherings. The portal usually includes features like event calendars, online registration, notifications, discussion forums, and location-based event searches. By improving communication and participation, a local event community portal helps strengthen community engagement, promotes local businesses and organizations, and makes it easier for people to discover and attend events happening around them.
+                </p><br><br>
+                <!--Task4-->
+                <h5>This is Task4</h5>
+                <table border="4">
+                    <caption><strong>Local Community Events</strong></caption>
+                    <tr>
+                        <td>
+                            <img src="art.webp" alt="Image 1" width="300" height="200" title="Art Festival">
+                            <h5>Art Festival</h5>
+                        </td>
+                        <td>
+                            <img src="cleaning.webp" alt="Image 2" width="300" height="200" title="Community Cleanup">
+                            <h5>Community Cleanup</h5>
+                        </td>
+                        <td>
+                            <img src="dance.webp" alt="Image 3" width="300" height="200" title="Dance Workshop">
+                            <h5>Dance Workshop</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="fooddonate.webp" alt="Image 4" width="300" height="200" title="Food Donation Drive">
+                            <h5>Food Donation Drive</h5>
+                        </td>
+                        <td>
+                            <img src="singing.webp" alt="Image 5" width="300" height="200" title="Singing Competition">
+                            <h5>Singing Competition</h5>
+                        </td>
+                        <td>
+                            <img src="fanfun.webp" alt="Image 6" width="300" height="200" title="Fam Fun Day">
+                            <h5>Fam Fun Day</h5>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <!--This is Events Section-->
+            <section id="events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li><strong>Community Picnic:</strong> Join us for a fun-filled day at the park with food, games, and live music. Date: July 15th, Time: 12 PM - 4 PM.</li>
+                    <li><strong>Farmers Market:</strong> Support local farmers and artisans by visiting our weekly farmers market every Saturday from 9 AM to 1 PM.</li>
+                    <li><strong>Outdoor Movie Night:</strong> Enjoy a movie under the stars at the community center parking lot. Date: August 20th, Time: 8 PM.</li>
+                </ul>
+                <p class="highlight">Our portal is designed to support event organizers, local businesses, and community members by providing an easy way to create, manage, and promote events. Users can explore event schedules, register online, receive notifications, and interact with others through discussions and feedback. By using modern technology and user-friendly features, the platform encourages communication, collaboration, and active participation within the community.
+                    It also helps local organizations and businesses reach a wider audience and grow their presence.
+                </p>
+                <!--Task5-->
+                <h5>This is Task5</h5>
+                <form>
+                    <h3>Event Registration Form</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your Name:" required autofocus><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your Email:" required autofocus><br><br>
+                    <label for="date">Event Date:</label>
+                    <input type="date" id="date" name="date" placeholder="Select an event date:" required autofocus><br><br>
+                    <label for="event">Choose an event:</label>
+                    <select id="event" name="event" required autofocus>
+                        <option value="">Select an event</option>
+                        <option value="communityPicnic">Community Picnic</option>
+                        <option value="farmersMarket">Farmers Market</option>
+                        <option value="outdoorMovieNight">Outdoor Movie Night</option>
+                    </select><br><br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter any additional information or questions here..." autofocus></textarea><br><br>
+                    <input type="submit" value="Register">
+                    <output id="output"></output>
+                    <script>
+                        const form = document.querySelector('form');
+                        const output = document.getElementById('output');
+
+                        form.addEventListener('submit', function(event) {
+                            event.preventDefault(); // Prevent the default form submission
+
+                            const name = document.getElementById('name').value;
+                            const email = document.getElementById('email').value;
+                            const date = document.getElementById('date').value;
+                            const eventSelected = document.getElementById('event').value;
+                            const message = document.getElementById('message').value;
+
+                            // Display the submitted information
+                            output.textContent = `Thank you, ${name}! You have registered for the ${eventSelected} on ${date}. We will contact you at ${email} if we have any updates. Your message: "${message}" has been received.`;
+                        });
+                    </script>
+
+                </form>
+
+            </section>
+            <!-- Question 6 : Event Feedback with Event Handling -->
+            <h5>This is Task6</h5>
+        
+            <section id="feedbackSection">
+                <h3>Event Feedback with Event Handling</h3><br>
+
+                <form>
+
+                    <!-- onblur Event -->
+                    <label for="feedbackPhone">Phone Number:</label>
+                    <input type="text" id="feedbackPhone" pattern="[0-9]{10}" placeholder="Enter 10 digit phone number" onblur="validatePhone()" required><br><br>
+
+                    <!-- onchange Event -->
+                    <label for="eventFee">Choose Event:</label>
+                    <select id="eventFee" onchange="showFee()" required>
+                        <option value="">--Select Event--</option>
+                        <option value="500">Dance Event-500</option>
+                        <option value="700">Singing-700</option>
+                        <option value="300">Food Stalls-300</option>
+                        <option value="400">Magic Show-400</option>
+                    </select><br>
+                    <p id="feeDisplay"></p><br>
+                    <!-- Keyboard Events -->
+                    <label for="feedbackText">Your Feedback:</label>
+                    <textarea id="feedbackText" rows="3" cols="50" placeholder="Type your feedback here..." onkeyup="countCharacters()" required></textarea>
+                    <p>
+                        Characters Typed:
+                        <span id="charCount">0</span>
+                    </p><br>
+                    <!-- onclick Event -->
+                    <input type="button" value="Submit Feedback" onclick="submitFeedback()">
+                    <br><br>
+                    <output id="feedbackOutput"></output>
+                    <br><br>
+                    <!-- ondblclick Event -->
+                    <h3>Double Click the Image</h3>
+
+                    <img src="dance.webp" alt="Community Event" title="Double Click to Enlarge" id="eventImage" width="300" ondblclick="enlargeImage()" class="imageBorder">
+
+                </form>
+                <script>
+                    // onblur Event
+                    function validatePhone(){
+
+                        let phone=document.getElementById("feedbackPhone").value;
+                        let pattern=/^[0-9]{10}$/;
+
+                        if(!pattern.test(phone)){
+                            alert("Please enter a valid 10-digit phone number");
+                        }
+                    }
+                    // onchange Event
+                    function showFee(){
+
+                        let fee=document.getElementById("eventFee").value;
+
+                        if(fee!==""){
+                            document.getElementById("feeDisplay").innerHTML="Event Fee:₹"+fee;
+                        }
+                        else{
+                            document.getElementById("feeDisplay").innerHTML="";
+                        }
+                    }
+                    // onclick Event
+                    function submitFeedback(){
+                        
+
+                        document.getElementById("feedbackOutput").value="Feedback submitted successfully! ✅";
+                    }
+
+                    // ondblclick Event
+                    function enlargeImage(){
+
+                        let image=document.getElementById("eventImage");
+
+                        if(image.style.width==="500px"){
+                            image.style.width="300px";
+                        }
+                        else{
+                            image.style.width="500px";
+                        }
+                    }
+                    // Keyboard Event
+                    function countCharacters(){
+
+                        let text=document.getElementById("feedbackText").value;
+
+                        document.getElementById("charCount").innerHTML=text.length;
+                    }
+
+                </script>
+            </section><br>
+            <section>
+                <!--Task7:Video Invite with Media Events-->
+                <h5>This is Task7</h5>
+                <h2>Video Invite with Media Events</h2>
+                <center>
+                <video width="400" height="300" controls oncanplay="videoReady()">
+                <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                </center>
+
+                <p id="videoMessage"></p>
+                <script>
+                    // onbeforeunload Event
+                    window.onbeforeunload=function(){
+                        return "Are you sure you want to leave? Your feedback will not be saved.";
+                    }
+                    // oncanplay Event
+                    function videoReady(){
+                        document.getElementById("videoMessage").innerHTML="The video is ready to play! Enjoy the invite.";
+                    }
+                </script>
+
+            </section><br>
+            <!--Task8-->
+            <h5>This is Task8</h5>
+            <section>
+                <!--Save User Preferences-->
+                <h3>Task-8:Save User Preferred Events in local storage and session storage</h3><br>
+                <form>
+                    <center>
+                    <label for="preferredEvent">Select Your Preferred Event:</label>
+                    <select id="preferredEvent" onchange="savePreference()">
+                        <option value="">--Select Event--</option>
+                        <option value="Dance Event">Dance Event</option>
+                        <option value="Singing">Singing</option>
+                        <option value="Food Stalls">Food Stalls</option>
+                        <option value="Magic Show">Magic Show</option>
+                    </select><br><br>
+                    
+                    <button type="button" onclick="savePreference()">Save Preference</button><br><br>
+                    <button type="button" onclick="clearPreference()">Clear Preference</button><br>
+                    <p id="preferenceDisplay"></p><br>
+                    </center>
+                </form>
+                <script>
+                    window.onload=function(){
+                        let savedPreference=localStorage.getItem("preferredEvent") || sessionStorage.getItem("preferredEvent");
+
+                        if(savedPreference){
+                            document.getElementById("preferredEvent").value=savedPreference;
+                            document.getElementById("preferenceDisplay").innerHTML="Your preferred event is: "+savedPreference;
+                            
+                        }
+                    }
+                    function savePreference(){
+                        let event=document.getElementById("preferredEvent").value;
+
+                        if(event!==""){
+                            localStorage.setItem("preferredEvent",event);
+                            sessionStorage.setItem("preferredEvent",event);
+                            document.getElementById("preferenceDisplay").innerHTML="Your preferred event has been saved: "+event;
+                        }
+                        else{
+                            document.getElementById("preferenceDisplay").innerHTML="Please select an event to save your preference.";
+                        }
+                    }
+
+                    function clearPreference(){
+                        localStorage.removeItem("preferredEvent");
+                        sessionStorage.removeItem("preferredEvent");
+                        document.getElementById("preferenceDisplay").innerHTML="Your preferred event has been cleared.";
+                    }
+                </script>
+
+            </section><br>
+
+            <section>
+            <!--Task 9:Geolocation-->
+            <h5>This is Task9</h5>
+                <center>
+                    <h3>Geolocation for Event Mapping</h3><br>
+                    <button onclick="getLocation()">Find Nearby Events</button><br>
+                </center><br>
+                <script>
+                    function getLocation(){
+                        if(navigator.geolocation){
+                            navigator.geolocation.getCurrentPosition(showPosition,showError,{enableHighAccuracy:true,timeout:5000,maximumAge:0});
+                        }
+                        else{
+                            alert("Geolocation is not supported by this browser.");
+                        }
+                    }
+
+                    function showPosition(position){
+                        let latitude=position.coords.latitude;
+                        let longitude=position.coords.longitude;
+
+                        alert("Your Location: Latitude: "+latitude+" Longitude: "+longitude);
+                    }
+
+                    function showError(error){
+                        switch(error.code){
+                            case error.PERMISSION_DENIED:
+                                alert("User denied the request for Geolocation.");
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                alert("Location information is unavailable.");
+                                break;
+                            case error.TIMEOUT:
+                                alert("The request to get user location timed out.");
+                                break;
+                            case error.UNKNOWN_ERROR:
+                                alert("An unknown error occurred.");
+                                break;
+                        }
+                    }
+                </script>
+            </section>
+            <!--In Task10 I had inspected the code using CHrome DevTools-->
+            <h5>As per Task 10.Thus the inspect of code using chrome dev tools is done</h5>
+
+            <!--This is contact section-->
+            <section id="contact">
+                <h2><span style="background-color: red;font-weight: bold;">Contact Us</span></h2>
+                <p class="highlight">If you have any questions or would like to get involved, please reach out to us:</p>
+                <ul>
+                    <li>Email:localEvents@gmail.com</li>
+                    <li>Phone No:8765789435</li>
+                    <li>Name:Local event community pride</li>
+                </ul>
+                <p class="highlight">In conclusion, the Local Event Community Portal serves as a bridge that connects people, ideas, and opportunities within the community.
+                It simplifies event management while encouraging social interaction and community involvement.
+                </p>
+        </main>
+        <!--This is footer section-->
+        <footer>
+            <h3>&copy;2026 EventsBright.com</h3>
+        </footer>
+
+        
+    </body>
+</html>

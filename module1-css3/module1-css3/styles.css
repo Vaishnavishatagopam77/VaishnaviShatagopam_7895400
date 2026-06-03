@@ -1,0 +1,240 @@
+/*Task3:Universal Selector*/
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*Task1:This is heading style*/
+h1{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*Task-2*/
+.cta-button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+
+/*Task-3*/
+/*Element Selector*/
+h2{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 8px;
+    text-align: center;
+}
+/*ID Selector*/
+#mainHeader{
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+/*Class Selector*/
+.event{
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+/*Grouping Selector*/
+h3,p{
+    font-family: Arial, sans-serif;
+    color: #666;
+    text-align: center;
+}
+/*Task-4*/
+section,h4{
+    padding: 15px;
+    color:aliceblue;
+    background:linear-gradient(90deg,#4CAF50,#00f2fe);
+    border-radius: 5px;
+    text-align: center;
+}
+/*fallback-color*/
+body{
+    background-color: #f4f4f4;
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+footer{
+    color:rgba(255,255, 0, 0.8);/*rgba color*/
+    background-color:#00ffff;/*hex color*/
+}
+/*Task-5*/
+#blocks{
+    font-family:'Arial', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    text-transform:none;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+/*Task-6*/
+li{
+    list-style-type:none;
+    list-style-position:inside;
+    text-align:center;
+    padding: 5px;
+    margin: 5px;
+    background-color:#e0e0e0;
+}
+a:link{
+    color:blue;
+    text-decoration:none;  
+}
+a:visited{
+    color:purple;
+    text-decoration:none;   
+}
+a:hover{
+    color:red;
+    text-decoration:underline;   
+}
+a:active{
+    color:orange;
+    text-decoration:none;
+}
+/*task7*/
+table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  text-align: center;
+}
+
+th,td {
+  border: 1px solid #333;
+  padding: 12px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Zebra striping */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+/*task8*/
+.eventCard {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+}
+input:focus,
+textarea:focus {
+  outline: 3px solid #4CAF50;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+.hiddenBox{
+    visibility:hidden;
+}
+.noneBox{
+    display:none;
+}
+/*Task-9*/
+.news-article{
+    column-count: 2; 
+    column-gap: 30px; 
+    column-rule: 1px solid gray; 
+}
+/*Task-10*/
+
+/* RESPONSIVE DESIGN FOR YOUR GIVEN HTML */
+
+/* Media Query: Tablets & Mobile */
+@media (max-width: 768px) {
+
+  /* Reduce overall font size */
+  body {
+    font-size: 0.9rem;
+  }
+
+  /* STACK NAVIGATION (if you add nav/ul later) */
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+    padding: 2vh 0;
+    font-size: 0.9rem;
+  }
+
+  /* Make headings responsive */
+  h1 {
+    font-size: 5vw;
+  }
+
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  h3, h4 {
+    font-size: 4vw;
+  }
+
+  /* Make paragraphs flexible */
+  p {
+    font-size: 3.5vw;
+  }
+
+  /* CTA BUTTON RESPONSIVE */
+  .cta-button {
+    width: 90%;
+    margin: 2vh auto;
+    padding: 2vh 3vw;
+  }
+
+  /* EVENT CARDS RESPONSIVE */
+  .eventCard,
+  .event {
+    width: 90%;
+    margin: 2vh auto;
+  }
+
+  /* IMAGES RESPONSIVE (if any exist) */
+  img {
+    width: 80vw;
+    height: auto;
+  }
+
+  /* TABLE RESPONSIVE */
+  table {
+    width: 95%;
+    font-size: 0.8rem;
+  }
+
+  /* FLEXIBLE LAYOUT USING FLEXBOX */
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 2vh 4vw;
+  }
+
+  /* LIST STYLING MOBILE */
+  li {
+    background-color: #e0e0e0;
+    margin: 1vh 0;
+  }
+}

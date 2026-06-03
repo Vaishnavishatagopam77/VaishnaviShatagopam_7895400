@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Community Event Portal</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+    body {
+        font-family: Arial;
+        margin: 20px;
+    }
+
+    .card {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+    }
+
+    #loading {
+        display: none;
+    }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+
+    <h2>Community Event Portal</h2>
+
+    <div id="loading">Loading events...</div>
+
+    <input type="text" id="searchBox" placeholder="Search event">
+
+    <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="Music">Music</option>
+        <option value="Workshop">Workshop</option>
+    </select>
+
+    <div id="eventContainer"></div>
+
+    <h3>Register Form</h3>
+
+    <form id="registrationForm">
+        <input name="username" placeholder="Name">
+        <input name="email" placeholder="Email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="error"></p>
+
+    <button id="registerBtn">Animate Card</button>
+
+    <div id="eventCard" class="card">Sample Event Card</div>
+
+    <!-- External JS -->
+    <script src="main.js"></script>
+
+    </body>
+</html>
